@@ -24,3 +24,6 @@ input {
     font-size: 2rem;
 }
 
+#password {
+    margin-right: 1rem;
+}
