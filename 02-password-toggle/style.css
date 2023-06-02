@@ -1,0 +1,26 @@
+/* General Stylings! */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+}
+
