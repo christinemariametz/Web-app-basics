@@ -18,24 +18,13 @@ Hints
 <!-- Password input -->
 <input type="password">
 
-const btn = document.querySelector("toggle-button");
-const inputField = document.querySelector("text");
-
-btn.addEventListener("click", e => {
-       btn.classList.toggle("button-dark");
-    body.classList.toggle("body-dark");
-
-        if (document.title === "Good Morning") {
-    document.title = "Good Night";
-   }    else {
-    document.title = "Good Morning";
-   }
-});
-
 
 Gedanken: 
----zu Button : Wenn ich den Button anklicke, kommt ="Hide Password", beim 2. mal "Show Password" (toggeln!)
----zu Eingabefeld: Wenn "Show Password" dann sind die Buchstaben verdeckt durch die Punkte. Wenn "Hide Password" sind die Buchstaben sichtbar.
+---zu Button : 
+Wenn ich den Button anklicke, kommt ="Hide Password", beim 2. mal "Show Password" (toggeln!)
+---zu Eingabefeld: 
+Wenn "Show Password" dann sind die Buchstaben verdeckt durch die Punkte. 
+Wenn "Hide Password" sind die Buchstaben sichtbar.
 
  */
 
@@ -48,7 +37,6 @@ btn.addEventListener("click", e => {
         btn.setAttribute("value", "Hide Password");
         passw.setAttribute("type", "text");
        } else {
-
         btn.setAttribute("value", "Show Password");
         passw.setAttribute("type", "password");
        }

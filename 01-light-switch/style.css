@@ -43,10 +43,9 @@ button {
 
 }
 
-.button-dark {
+.body-dark button {
     border: 5px solid snow;
     background-color: #333;
     color: snow;
     box-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 20px yellow;
-
 }
