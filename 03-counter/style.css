@@ -5,12 +5,8 @@
 html {
     box-sizing: border-box;
     font-size: 24px;
-    font-family: monospace;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: block;
-}
-
-element.style {
-    --counter: 0%;
 }
 
 html, body {
@@ -63,7 +59,7 @@ main {
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(gold, gold);
-    background-size: var(--counter, 0%) 100%;
+    background-size: 0% 100%;
     background-repeat: no-repeat;
     transition: 0.25s background-size ease-in-out;
 }

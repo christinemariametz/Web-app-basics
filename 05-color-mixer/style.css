@@ -1,0 +1,72 @@
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: monospace;
+    display:block;
+}
+
+body {
+    margin: 0;
+}
+
+@media screen and (min-width: 600px)
+header {
+    flex-direction: row;
+    align-items: baseline;
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+@media screen and (min-width: 600px)
+header > * + * {
+    margin-top: unset !important;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    flex-wrap: wrap;
+}
+
+div {
+    display: block;
+}
+
+label {
+    font-size: 2rem;
+    cursor: default;
+}
+
+input#red {
+    accent-color: red;
+}
+input#green {
+    accent-color: green;
+}
+input#blue {
+    accent-color: blue;
+}
+
+input[type="range" i] {
+    appearance: auto;
+    cursor: default;
+    color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+    padding: initial;
+    border: initial;
+    margin: 2px;
+}
