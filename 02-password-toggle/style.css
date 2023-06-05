@@ -6,6 +6,10 @@
   box-sizing: inherit;
 }
 
+head {
+    display: none;
+}
+
 html, body {
     height: 100%;
     display: block;
@@ -21,9 +25,11 @@ body {
 
 input {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
+
+
 #password {
-    margin-right: 1rem;
+    margin-right: 3rem;
 }

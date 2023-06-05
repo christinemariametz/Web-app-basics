@@ -13,8 +13,35 @@ Requirments
  - 100 counting steps will turn the background fully colorful
  - After every 100 counting steps reset the background (see video)
 
+Gedanken: 
+- Wenn auf den body ge"click"t wird --> "counter" zählt hoch && "Prozent-Farb-Ticker" baut sich auf (von 1%-100%).
+Zusätzlich:
+Bei "counter" === 100? dann fängt der "Prozent-Farb-Ticker" wieder bei 0 an, aber der "counter" zählt weiter (101..).
 
+Zusätzlich:
+- Wenn ich auf den Button "reset" klicke --> "counter" springt auf 0 zurück.
  
 */
 
+const mainCounter = document.querySelector("#counter");
+const main = document.querySelector("main");
+let curValue = 0;
+let ColorValue = 0;
+const btnReset = document.querySelector("button");
 
+
+main.addEventListener("click", () => {
+curValue++;
+mainCounter.textContent = curValue;
+ColorValue++;
+if(ColorValue === 101) {
+    ColorValue = 0;
+}
+
+ColorValue++;
+})
+
+btnReset.addEventListener("click", () => {
+    curValue = 0;
+    mainCounter.textContent = curValue;
+    })

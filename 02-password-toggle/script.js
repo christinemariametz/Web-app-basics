@@ -24,7 +24,7 @@ Gedanken:
 Wenn ich den Button anklicke, kommt ="Hide Password", beim 2. mal "Show Password" (toggeln!)
 ---zu Eingabefeld: 
 Wenn "Show Password" dann sind die Buchstaben verdeckt durch die Punkte. 
-Wenn "Hide Password" sind die Buchstaben sichtbar.
+Wenn "Hide Password" sind die Buchstaben "Text" sichtbar.
 
  */
 
