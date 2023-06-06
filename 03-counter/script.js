@@ -11,8 +11,6 @@ Zusätzlich:
 - Wenn ich auf den Button "reset" klicke --> "counter" springt auf 0 zurück.
  */
 
-
-
 const mainCounter = document.querySelector("#counter");
 const main = document.querySelector("main");
 let curValue = 0;
@@ -23,7 +21,8 @@ function IncrementCounter() {
     curValue++;
     mainCounter.textContent = curValue;
     ColorValue++;
-    //main.style = "--counter: " + ColorValue + "%";
+    //1. main.style = "--counter: " + ColorValue + "%"; (mit Variable)
+    //2. ohne Variable:
     main.style.backgroundSize = ColorValue + "% 100%";
     if(ColorValue % 100 === 0) {ColorValue = 0;}
 }
