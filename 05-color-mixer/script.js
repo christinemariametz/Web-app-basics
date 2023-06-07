@@ -1,6 +1,6 @@
 
 /* Gedanken:
-- 1. Default Value hinzufügen. 
+
 Mit .style auf den Body und rgb Farbe wie im html definiert.
 - 2. Wenn ich einen slider "move" (?? Ist dann Event Typ = click oder keydown oder input oder change ...??), verändert sich der rgb Wert jeweils und die Background-color updated sich zur neuen Farbe.
 - 3. && die rgb Farbe (#110011) passt sich an. (Evtl. mit InnerText/Text Content arbeiten??)
@@ -9,39 +9,52 @@ Mit .style auf den Body und rgb Farbe wie im html definiert.
 
 "use strict"
 
-document.body.style.backgroundColor = "rgb(150, 33, 180)";
-// die einzelnen Farben muss ich auseinander bekommen?!
-// "rgb + red + green + blue" ?
-
+// auf welche "Körper" muss ich zugreifen? Welche will ich bewegen/verändern? (Variablen)
 const body = document.querySelector("body");
-const RedSlider = document.querySelector("#red");
-const GreenSlider = document.querySelector("#green");
-const BlueSlider = document.querySelector("#blue");
-const HexColor = document.querySelector("hex-color");
+const redSlider = document.getElementById("red");
+const greenSlider = document.getElementById("green");
+const blueSlider = document.getElementById("blue");
+const hexColor = document.getElementById("hex-color");
 
-//    2. bearbeiten....
-// Wenn ich am roten Slider schiebe, entsteht ein neues value und dann muss sich die gesamte body farbe ändern. 
-// Wenn ich am grünen Slider schiebe auch.
-// Wenn ich am blauen Slider schiebe auch.
-// die Ergebnisse müssen in ein gemeinsames Ergebnis springen.
+// "Default Value" hinzufügen. 
+let red = redSlider.value;
+let green = greenSlider.value;
+let blue = blueSlider.value;
+
+// 1. die einzelnen Farben muss ich auseinander bekommen?! => function ("rgb + red + green + blue" )?
+// 2. auf die HexZahlen zugreifen (innerText?) und meine red/green/blue Values(num) in Hex umwandeln.
+
+function numToHex(rgb) {
+rgb = parseInt(rgb).toString(16);
+return rgb.length === 1 ? "0" + rgb : rgb;
+}
+
+function updateBackgroundColor() {
+    let rgbColor = "rgb(" + red + "," + green + "," + blue + ")";
+    body.style.backgroundColor = rgbColor;
+    hexColor.innerText = "#" + numToHex(red) + numToHex(green) + numToHex(blue);
+}
+
+// die einzelnen Slider müssen "geklickt" werden. Frage: Ist mein EventTyp dann anders??(change/input??)
+redSlider.addEventListener("input", (event) => {
+    red = event.target.value;
+    updateBackgroundColor();
+});   
+
+greenSlider.addEventListener("input", (event) => {
+    green = event.target.value;
+    updateBackgroundColor();
+});   
+
+blueSlider.addEventListener("input", (event) => {
+    blue = event.target.value;
+    updateBackgroundColor();
+});   
+
+updateBackgroundColor();
 
 
-let Red = RedSlider.value;
-let Green = GreenSlider.value;
-let Blue = BlueSlider.value;
 
-let rgbColor = "rgb(" + Red + "," + Green + "," + Blue + ")";
 
-RedSlider.addEventListener("input", () => {
-body.style.backgroundcolor = rgbColor;
-} );
-
-GreenSlider.addEventListener("input", () => {
-body.style.backgroundcolor = rgbColor;
-} );
-
-BlueSlider.addEventListener("input", () => {
-body.style.backgroundcolor = rgbColor;
-} );
 
 
