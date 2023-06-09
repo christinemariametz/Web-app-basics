@@ -13,8 +13,24 @@ html {
 
 
 body {
-    display: block;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+
+}
+
+header {
+    background-color: beige;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+main {
+    background-color: rgb(252, 252, 239);
+    border: 50px solid beige;
+    padding: 3rem;
 }
 
 .remove {
