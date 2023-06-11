@@ -21,17 +21,15 @@ body {
 }
 
 header {
-    background-color: beige;
     padding-top: 2rem;
     padding-left: 4rem;
     padding-right: 4rem;
 }
 
 main {
-    background-color: rgb(252, 252, 239);
-    border: 50px solid beige;
-    padding: 3rem;
+    padding: 1rem;
 }
+
 
 .remove {
     margin-top: 1.5rem;
