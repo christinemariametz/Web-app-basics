@@ -17,13 +17,25 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 30px;
+    background-color: rgb(237, 236, 236);
 
 }
 
+.container {
+    background-color: rgb(254, 253, 253);
+}
+
+h1 {
+    color: rgb(254, 0, 131);
+    margin: 0rem;
+}
+
 header {
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-left: 4rem;
     padding-right: 4rem;
+    padding-bottom: 1rem;
+    background-color: rgb(252, 217, 223);
 }
 
 main {
@@ -31,7 +43,7 @@ main {
 }
 
 
-.remove {
+#remove {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }

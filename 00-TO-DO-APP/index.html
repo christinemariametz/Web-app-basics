@@ -10,31 +10,36 @@
 
 
 <body>
-    <header>
-        <h1>ToDo App</h1>
-    </header>
-    <main>
-        <div>
-            <label>All</label>
-            <input type="radio" id="radioInputAll"></input>
-        </div>
-        <div>
-            <label>Open</label>
-            <input type="radio" id="radioInputOpen"></input>
-        </div>
-        <div>
-            <label>Done</label>
-            <input type="radio" id="radioInputDone"></input>
-        </div>
+    <div class="container">
+        <header>
+            <h1>ToDo App</h1>
+        </header>
+        <main>
+            <div>
+                <label>All</label>
+                <!--
+                alle input/type=radio benötigen den gleichen "name" damit sie zusammenhängen. "checked" in einem input feld = der default ausgelöste radio button.
+                -->
+                <input type="radio" name="filter" id="radioInputAll" checked />
+            </div>
+            <div>
+                <label>Open</label>
+                <input type="radio" name="filter" id="radioInputOpen"></input>
+            </div>
+            <div>
+                <label>Done</label>
+                <input type="radio" name="filter" id="radioInputDone"></input>
+            </div>
 
-        <button id="remove">Remove Done Todos</button>
+            <button id="remove">Remove Done Todos</button>
 
-        <div>
-            <input type="text" placeholder="What TODO?" id="newToDoInput" name="todo"></input>
-            <button id="add-todo">Add</button>
-            <ul id="list">
-                <li>dummy</li>
-            </ul>
+            <div>
+                <input type="text" placeholder="What TODO?" id="newToDoInput" name="todo"></input>
+                <button id="add-todo">Add</button>
+                <ul id="list">
+                <li></li>
+                </ul>
+            </div>
         </div>
     </main>
     <script src="script.js"></script>
