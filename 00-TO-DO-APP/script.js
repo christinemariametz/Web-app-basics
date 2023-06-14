@@ -34,8 +34,14 @@ state = readStateFromLocalStorage();
         description: "Lern JavaScript",
         done: false
     },
-    "1686512133550": { description: "Lern CSS", done: false },
-    "1686512133551": { description: "Lern HTML", done: false },
+    "1686512133550": {
+        description: "Lern CSS", 
+        done: false 
+    },
+    "1686512133551": {
+        description: "Lern HTML", 
+        done: false 
+    },
 };*/
 
 // State Management: ----> Visualisieren meiner Todos/ "Rendern"

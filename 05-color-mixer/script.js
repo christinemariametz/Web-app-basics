@@ -4,7 +4,6 @@
 Mit .style auf den Body und rgb Farbe wie im html definiert.
 - 2. Wenn ich einen slider "move" (?? Ist dann Event Typ = click oder keydown oder input oder change ...??), verändert sich der rgb Wert jeweils und die Background-color updated sich zur neuen Farbe.
 - 3. && die rgb Farbe (#110011) passt sich an. (Evtl. mit InnerText/Text Content arbeiten??)
-
 */
 
 "use strict"
@@ -50,11 +49,30 @@ blueSlider.addEventListener("input", (event) => {
     blue = event.target.value;
     updateBackgroundColor();
 });   
-
 updateBackgroundColor();
 
 
+function fetchRandomColor() {
+    const fetchRequest = fetch("https://dummy-apis.netlify.app/api/color");
+    fetchRequest
+    .then((response) => {
+        if(response.ok) {
+        return response.json();
+        }      
+        })
+    .then((jsonData) => {
+        hexColor.innerText = jsonData.color;
+        red = jsonData.rgb.r;
+        green = jsonData.rgb.g;
+        blue = jsonData.rgb.b;
+        redSlider.value = jsonData.rgb.r;
+        greenSlider.value = jsonData.rgb.g;
+        blueSlider.value = jsonData.rgb.b;
+    });
+    updateBackgroundColor();
+    }
 
-
+const randomBtn = document.getElementById("randomBtn");
+randomBtn.addEventListener("click", fetchRandomColor);
 
 
